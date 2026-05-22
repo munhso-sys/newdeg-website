@@ -145,7 +145,7 @@ export default function NewdegHomepage() {
             <p className="inline-flex items-center gap-2 rounded-full bg-teal-50 text-teal-800 px-4 py-2 text-sm font-extrabold mb-7 shadow-sm">
               Судалгаа • Шинжилгээ • Хөгжүүлэлт
             </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.06] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[0.95] tracking-tight">
               Дата өгөгдлөөс <span className="text-teal-700">мэдлэгийг</span> бүтээж, ухаалаг шийдвэр гаргалтыг удирдана.
             </h1>
             <p className="mt-7 text-base md:text-lg text-slate-600 leading-8 max-w-xl">
