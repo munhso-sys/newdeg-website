@@ -94,7 +94,7 @@ export default function NewdegHomepage() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <a href="#home" className="flex items-center gap-3">
             <Image
-              src="/logo.png"
+              src="/ND-2.gif"
               alt="NEWDEG logo"
               width={58}
               height={58}
