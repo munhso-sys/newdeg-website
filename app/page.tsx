@@ -60,6 +60,10 @@ const partners = [
     name: "Шидэт Ундарга ХХК",
     logo: "/partners/shu.png",
   },
+  {
+    name: "Хөмөг Майнинг ХХК",
+    logo: "/partners/khumug.png",
+  },
 ];
 
 const stats = [
