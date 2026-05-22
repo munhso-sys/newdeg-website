@@ -44,12 +44,22 @@ const services = [
 ];
 
 const partners = [
-  "Барулас Майнинг ХХК",
-  "Дулаанхан Хайрхан ХХК",
-  "Хөмөг Майнинг ХХК",
-  "Шидэт Ундарга ХХК",
-  "Final Drive Services ХХК",
-  "Толой ХХК",
+  {
+    name: "Барулас Майнинг ХХК",
+    logo: "/partners/barulas.png",
+  },
+  {
+    name: "Дулаанхан Хайрхан ХХК",
+    logo: "/partners/dulaankhan.png",
+  },
+  {
+    name: "Final Drive Services ХХК",
+    logo: "/partners/finaldrive.png",
+  },
+  {
+    name: "Шидэт Ундарга ХХК",
+    logo: "/partners/shu.png",
+  },
 ];
 
 const stats = [
@@ -160,7 +170,7 @@ export default function NewdegHomepage() {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-6 mb-8">
-          {[[Target,"Зорилго","Дата өгөгдлөөс мэдлэгийг бүтээж ухаалаг шийдвэр гаргалтыг удирдана."],[Gem,"Үнэт зүйл","Түргэн шуурхай, оновчтой удирдлага."],[Telescope,"Алсын хараа","Хүн төвтэй технологийг бүтээж, мэдлэгийг удирдлага болгох."]].map(([Icon,title,text]) => (
+          {[[Target,"Зорилго","Дата өгөгдлөөс мэдлэгийг бүтээж ухаалаг шийдвэр гаргалтыг удирдана."],[Gem,"Үнэт зүйл","Түргэн шуурхай, оновчтой удирдлага."],[Telescope,"Алсын хараа","Хүн төвтэй технологийг бүтээж, мэдлэгийг удирдлага болгох."]].map(([Icon,title,text]: any) => (
             <div key={title as string} className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-xl transition hover:-translate-y-1">
               <div className="w-14 h-14 rounded-2xl bg-teal-50 flex items-center justify-center mb-5">
                 <Icon className="text-teal-700" size={34} />
@@ -194,7 +204,7 @@ export default function NewdegHomepage() {
             <h2 className="text-3xl md:text-4xl font-black text-teal-900">Бидний үйлчилгээ</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {services.map(([Icon, title]) => (
+            {services.map(([Icon, title]:any) => (
               <div key={title as string} className="group rounded-3xl border border-slate-100 bg-slate-50 hover:bg-teal-700 p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition min-h-44 flex flex-col items-center justify-center">
                 <Icon className="mx-auto text-teal-700 group-hover:text-white mb-4 transition" size={38} />
                 <h3 className="font-extrabold text-sm leading-6 group-hover:text-white transition">{title}</h3>
@@ -211,8 +221,21 @@ export default function NewdegHomepage() {
         </div>
         <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-5">
           {partners.map((p) => (
-            <div key={p} className="bg-white rounded-3xl border border-slate-100 p-5 text-center shadow-sm min-h-36 flex items-center justify-center hover:shadow-xl transition">
-              <span className="font-black text-slate-700 text-sm leading-6">{p}</span>
+            <div
+              key={p.name}
+              className="bg-white rounded-3xl border border-slate-100 p-6 text-center shadow-sm min-h-40 flex flex-col items-center justify-center hover:shadow-xl transition"
+            >
+              <Image
+                src={p.logo}
+                alt={p.name}
+                width={110}
+                height={110}
+                className="object-contain h-20 w-auto mb-4"
+              />
+
+              <span className="font-black text-slate-700 text-sm leading-6">
+                {p.name}
+              </span>
             </div>
           ))}
         </div>
@@ -224,7 +247,7 @@ export default function NewdegHomepage() {
         <div className="max-w-7xl mx-auto px-6 relative">
           <h2 className="text-3xl md:text-4xl font-black text-center mb-12">Яагаад бид гэж?</h2>
           <div className="grid md:grid-cols-4 gap-8 text-center">
-            {stats.map(([Icon,a,b]) => (
+            {stats.map(([Icon,a,b]:any) => (
               <div key={a as string} className="rounded-3xl bg-white/10 border border-white/10 backdrop-blur p-7">
                 <Icon className="mx-auto mb-4" size={42} />
                 <h3 className="text-xl font-black mb-2">{a}</h3>
