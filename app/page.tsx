@@ -146,7 +146,7 @@ export default function NewdegHomepage() {
               Судалгаа • Шинжилгээ • Хөгжүүлэлт
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[0.95] tracking-tight">
-              Дата өгөгдлөөс <span className="text-teal-700">мэдлэгийг</span> бүтээж, ухаалаг шийдвэр гаргалтыг удирдана.
+              Өгөгдөлд суурилсан <span className="text-teal-700">шинжилгээгээр</span> оновчтой шийдвэр гаргалтыг дэмжинэ.
             </h1>
             <p className="mt-7 text-base md:text-lg text-slate-600 leading-8 max-w-xl">
               Уул уурхай, эрчим хүч, дэд бүтцийн салбарт судалгаа, шинжилгээ, дижитал шилжилтийн оновчтой шийдлийг хүргэнэ.
