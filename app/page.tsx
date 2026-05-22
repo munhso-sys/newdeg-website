@@ -289,7 +289,7 @@ export default function NewdegHomepage() {
           ))}
         </div>
         <p className="text-center text-sm text-slate-500 mt-6">
-          Дараагийн шатанд байгууллагуудын бодит логог PNG/SVG хэлбэрээр тус бүрээр байршуулна.
+          Салбар бүрийн мэдлэг, туршлага бидний амжилтыг цогцлооно.
         </p>
       </section>
 
