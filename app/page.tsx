@@ -78,35 +78,65 @@ export default function NewdegHomepage() {
     <main className="min-h-screen bg-[#F8FAFC] text-slate-950">
       <section className="hidden md:block bg-white/80 border-b border-slate-100 text-xs text-slate-600">
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-center gap-8">
-          <span className="flex items-center gap-2"><MapPin size={14} className="text-teal-700" /> Улаанбаатар, Монгол улс</span>
-          <span className="flex items-center gap-2"><Phone size={14} className="text-teal-700" /> +976 55197901</span>
-          <span className="flex items-center gap-2"><Mail size={14} className="text-teal-700" /> info@newdeg.mn</span>
+          <span className="flex items-center gap-2">
+            <MapPin size={14} className="text-teal-700" /> Улаанбаатар, Монгол улс
+          </span>
+          <span className="flex items-center gap-2">
+            <Phone size={14} className="text-teal-700" /> +976 55197901
+          </span>
+          <span className="flex items-center gap-2">
+            <Mail size={14} className="text-teal-700" /> info@newdeg.mn
+          </span>
         </div>
       </section>
 
       <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-xl border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Image src="/logo.png" alt="NEWDEG logo" width={58} height={58} className="w-auto h-auto" priority />
+          <a href="#home" className="flex items-center gap-3">
+            <Image
+              src="/logo.png"
+              alt="NEWDEG logo"
+              width={58}
+              height={58}
+              className="w-auto h-auto"
+              priority
+            />
             <div className="text-2xl font-black tracking-wide text-teal-700">NEWDEG</div>
-          </div>
+          </a>
 
           <nav className="hidden lg:flex items-center gap-9 font-semibold text-sm text-slate-700">
-            <a className="text-teal-700 border-b-2 border-teal-700 pb-2">Нүүр</a>
-            <a className="hover:text-teal-700 transition">Бидний тухай</a>
-            <a className="hover:text-teal-700 transition">Үйлчилгээ</a>
-            <a className="hover:text-teal-700 transition">Хамтрагчид</a>
-            <a className="hover:text-teal-700 transition">Холбоо барих</a>
+            <a href="#home" className="text-teal-700 border-b-2 border-teal-700 pb-2">
+              Нүүр
+            </a>
+            <a href="#about" className="hover:text-teal-700 transition">
+              Бидний тухай
+            </a>
+            <a href="#services" className="hover:text-teal-700 transition">
+              Үйлчилгээ
+            </a>
+            <a href="#partners" className="hover:text-teal-700 transition">
+              Хамтрагчид
+            </a>
+            <a href="#contact" className="hover:text-teal-700 transition">
+              Холбоо барих
+            </a>
           </nav>
 
           <div className="flex items-center gap-3">
-            <button className="hidden sm:inline-flex bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-xl font-bold shadow-lg shadow-teal-700/15 transition">Холбоо барих</button>
-            <button className="lg:hidden border border-slate-200 p-3 rounded-xl"><Menu size={20} /></button>
+            <a
+              href="#contact"
+              className="hidden sm:inline-flex bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-xl font-bold shadow-lg shadow-teal-700/15 transition"
+            >
+              Холбоо барих
+            </a>
+            <button className="lg:hidden border border-slate-200 p-3 rounded-xl" aria-label="Open menu">
+              <Menu size={20} />
+            </button>
           </div>
         </div>
       </header>
 
-      <section className="relative overflow-hidden bg-white">
+      <section id="home" className="relative overflow-hidden bg-white scroll-mt-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,#008C9522,transparent_35%),linear-gradient(90deg,#ffffff_0%,#ffffff_48%,#e9f1f2_100%)]" />
         <div className="absolute right-0 top-0 h-full w-1/2 opacity-25 bg-[linear-gradient(90deg,#008C95_1px,transparent_1px),linear-gradient(#008C95_1px,transparent_1px)] bg-[size:52px_52px]" />
 
@@ -122,10 +152,18 @@ export default function NewdegHomepage() {
               Уул уурхай, эрчим хүч, дэд бүтцийн салбарт судалгаа, шинжилгээ, дижитал шилжилтийн оновчтой шийдлийг хүргэнэ.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
-              <button className="bg-teal-700 hover:bg-teal-800 text-white px-7 py-4 rounded-xl font-extrabold flex items-center gap-2 shadow-xl shadow-teal-700/20 transition hover:-translate-y-0.5">
+              <a
+                href="#services"
+                className="bg-teal-700 hover:bg-teal-800 text-white px-7 py-4 rounded-xl font-extrabold flex items-center gap-2 shadow-xl shadow-teal-700/20 transition hover:-translate-y-0.5"
+              >
                 Үйлчилгээ үзэх <ArrowRight size={18} />
-              </button>
-              <button className="border border-teal-700 text-teal-800 px-7 py-4 rounded-xl font-extrabold bg-white hover:bg-teal-50 transition">Холбоо барих</button>
+              </a>
+              <a
+                href="#contact"
+                className="border border-teal-700 text-teal-800 px-7 py-4 rounded-xl font-extrabold bg-white hover:bg-teal-50 transition"
+              >
+                Холбоо барих
+              </a>
             </div>
           </div>
 
@@ -158,14 +196,16 @@ export default function NewdegHomepage() {
               <div className="relative mt-auto">
                 <BarChart3 size={76} className="mb-6 opacity-95" />
                 <h3 className="text-3xl font-black">Mining Intelligence Dashboard</h3>
-                <p className="mt-3 text-teal-50 max-w-md leading-7">Процесс, бүтээмж, эрсдэл, хүний нөөцийн дата дээр суурилсан шийдвэрийн орчин.</p>
+                <p className="mt-3 text-teal-50 max-w-md leading-7">
+                  Процесс, бүтээмж, эрсдэл, хүний нөөцийн дата дээр суурилсан шийдвэрийн орчин.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-20">
+      <section id="about" className="max-w-7xl mx-auto px-6 py-20 scroll-mt-28">
         <div className="flex items-end justify-between gap-6 mb-10">
           <div>
             <p className="font-bold text-teal-700 mb-2">Компанийн үндэс</p>
@@ -174,7 +214,11 @@ export default function NewdegHomepage() {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-6 mb-8">
-          {[[Target,"Зорилго","Дата өгөгдлөөс мэдлэгийг бүтээж ухаалаг шийдвэр гаргалтыг удирдана."],[Gem,"Үнэт зүйл","Түргэн шуурхай, оновчтой удирдлага."],[Telescope,"Алсын хараа","Хүн төвтэй технологийг бүтээж, мэдлэгийг удирдлага болгох."]].map(([Icon,title,text]: any) => (
+          {[
+            [Target, "Зорилго", "Дата өгөгдлөөс мэдлэгийг бүтээж ухаалаг шийдвэр гаргалтыг удирдана."],
+            [Gem, "Үнэт зүйл", "Түргэн шуурхай, оновчтой удирдлага."],
+            [Telescope, "Алсын хараа", "Хүн төвтэй технологийг бүтээж, мэдлэгийг удирдлага болгох."],
+          ].map(([Icon, title, text]: any) => (
             <div key={title as string} className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-xl transition hover:-translate-y-1">
               <div className="w-14 h-14 rounded-2xl bg-teal-50 flex items-center justify-center mb-5">
                 <Icon className="text-teal-700" size={34} />
@@ -189,8 +233,15 @@ export default function NewdegHomepage() {
           <div>
             <h3 className="text-2xl md:text-3xl font-black text-teal-900 mb-6">Нивдэг ХХК-ийн танилцуулга</h3>
             <ul className="space-y-4 text-slate-700 leading-7">
-              {["2021 онд үүсгэн байгуулагдсан", "Үйл ажиллагааны чиглэл: Судалгаа, шинжилгээ, хөгжүүлэлт", "Салбар: Уул уурхай, эрчим хүч, дэд бүтэц", "Салбартаа мэргэшсэн инженер, эрдэмтэн, багш, судлаачдын хамт олон"].map((item) => (
-                <li key={item} className="flex gap-3"><CheckCircle2 className="text-teal-700 shrink-0 mt-1" size={20} /> {item}</li>
+              {[
+                "2021 онд үүсгэн байгуулагдсан",
+                "Үйл ажиллагааны чиглэл: Судалгаа, шинжилгээ, хөгжүүлэлт",
+                "Салбар: Уул уурхай, эрчим хүч, дэд бүтэц",
+                "Салбартаа мэргэшсэн инженер, эрдэмтэн, багш, судлаачдын хамт олон",
+              ].map((item) => (
+                <li key={item} className="flex gap-3">
+                  <CheckCircle2 className="text-teal-700 shrink-0 mt-1" size={20} /> {item}
+                </li>
               ))}
             </ul>
           </div>
@@ -201,14 +252,14 @@ export default function NewdegHomepage() {
         </div>
       </section>
 
-      <section className="bg-white py-20">
+      <section id="services" className="bg-white py-20 scroll-mt-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="font-bold text-teal-700 mb-2">Шийдлийн хүрээ</p>
             <h2 className="text-3xl md:text-4xl font-black text-teal-900">Бидний үйлчилгээ</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {services.map(([Icon, title]:any) => (
+            {services.map(([Icon, title]: any) => (
               <div key={title as string} className="group rounded-3xl border border-slate-100 bg-slate-50 hover:bg-teal-700 p-6 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition min-h-44 flex flex-col items-center justify-center">
                 <Icon className="mx-auto text-teal-700 group-hover:text-white mb-4 transition" size={38} />
                 <h3 className="font-extrabold text-sm leading-6 group-hover:text-white transition">{title}</h3>
@@ -218,17 +269,14 @@ export default function NewdegHomepage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-20">
+      <section id="partners" className="max-w-7xl mx-auto px-6 py-20 scroll-mt-28">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="font-bold text-teal-700 mb-2">Экосистем</p>
           <h2 className="text-3xl md:text-4xl font-black text-teal-900">Хамтрагч байгууллагууд</h2>
         </div>
-        <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-5">
+        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-5">
           {partners.map((p) => (
-            <div
-              key={p.name}
-              className="bg-white rounded-3xl border border-slate-100 p-6 text-center shadow-sm min-h-40 flex flex-col items-center justify-center hover:shadow-xl transition"
-            >
+            <div key={p.name} className="bg-white rounded-3xl border border-slate-100 p-6 text-center shadow-sm min-h-40 flex flex-col items-center justify-center hover:shadow-xl transition">
               <Image
                 src={p.logo}
                 alt={p.name}
@@ -236,14 +284,13 @@ export default function NewdegHomepage() {
                 height={110}
                 className="object-contain h-20 w-auto mb-4"
               />
-
-              <span className="font-black text-slate-700 text-sm leading-6">
-                {p.name}
-              </span>
+              <span className="font-black text-slate-700 text-sm leading-6">{p.name}</span>
             </div>
           ))}
         </div>
-        <p className="text-center text-sm text-slate-500 mt-6">Дараагийн шатанд байгууллагуудын бодит логог PNG/SVG хэлбэрээр тус бүрээр байршуулна.</p>
+        <p className="text-center text-sm text-slate-500 mt-6">
+          Дараагийн шатанд байгууллагуудын бодит логог PNG/SVG хэлбэрээр тус бүрээр байршуулна.
+        </p>
       </section>
 
       <section className="relative bg-gradient-to-br from-teal-950 via-teal-900 to-teal-700 text-white py-20 overflow-hidden">
@@ -251,7 +298,7 @@ export default function NewdegHomepage() {
         <div className="max-w-7xl mx-auto px-6 relative">
           <h2 className="text-3xl md:text-4xl font-black text-center mb-12">Яагаад бид гэж?</h2>
           <div className="grid md:grid-cols-4 gap-8 text-center">
-            {stats.map(([Icon,a,b]:any) => (
+            {stats.map(([Icon, a, b]: any) => (
               <div key={a as string} className="rounded-3xl bg-white/10 border border-white/10 backdrop-blur p-7">
                 <Icon className="mx-auto mb-4" size={42} />
                 <h3 className="text-xl font-black mb-2">{a}</h3>
@@ -262,16 +309,22 @@ export default function NewdegHomepage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-20">
+      <section id="contact" className="max-w-7xl mx-auto px-6 py-20 scroll-mt-28">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="font-bold text-teal-700 mb-2">Хамтын ажиллагаа</p>
           <h2 className="text-3xl md:text-4xl font-black text-teal-900">Холбоо барих</h2>
         </div>
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-[2rem] p-8 border border-slate-100 shadow-sm space-y-6">
-            <p className="flex gap-3 leading-7"><MapPin className="text-teal-700 shrink-0" /> Баянгол дүүрэг, 19-р хороо, 54-22 тоот, Улаанбаатар, Монгол улс</p>
-            <p className="flex gap-3"><Phone className="text-teal-700 shrink-0" /> +976 55197901</p>
-            <p className="flex gap-3"><Mail className="text-teal-700 shrink-0" /> info@newdeg.mn</p>
+            <p className="flex gap-3 leading-7">
+              <MapPin className="text-teal-700 shrink-0" /> Баянгол дүүрэг, 19-р хороо, 54-22 тоот, Улаанбаатар, Монгол улс
+            </p>
+            <p className="flex gap-3">
+              <Phone className="text-teal-700 shrink-0" /> +976 55197901
+            </p>
+            <p className="flex gap-3">
+              <Mail className="text-teal-700 shrink-0" /> info@newdeg.mn
+            </p>
           </div>
           <form className="lg:col-span-2 bg-white rounded-[2rem] p-8 border border-slate-100 shadow-sm grid md:grid-cols-2 gap-4">
             <input className="border border-slate-200 rounded-xl p-4 outline-none focus:ring-2 focus:ring-teal-600/20" placeholder="Нэр" />
@@ -286,10 +339,10 @@ export default function NewdegHomepage() {
 
       <footer className="bg-teal-950 text-white py-10">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6 items-center">
-          <div className="flex items-center gap-3">
+          <a href="#home" className="flex items-center gap-3">
             <Image src="/logo.png" alt="NEWDEG logo" width={48} height={48} className="w-auto h-auto brightness-0 invert" />
             <div className="text-2xl font-black">NEWDEG</div>
-          </div>
+          </a>
           <p className="text-teal-100 text-sm">© 2024 Нивдэг ХХК. Бүх эрх хуулиар хамгаалагдсан.</p>
         </div>
       </footer>
